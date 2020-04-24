@@ -5,15 +5,15 @@ Light green: #7ed56f
 Medium green: #55c57a
 Dark green: #28b485
 
+  
 */
-
-*{
+*, *::before, *::after {
+  box-sizing: inherit;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 html{
-  font-size: 10px;
+  font-size: 62.5%;
 }
 body{
     font-family: "Lato", sans-serif;
@@ -22,6 +22,7 @@ body{
     line-height: 1.7;
     color: #777;
     padding: 3rem;
+    box-sizing: border-box;
 }
 
 /* header */
@@ -39,13 +40,13 @@ header{
 
 /* logo */
 
-.logo-box{
+.header__logo-box{
     position: absolute;
     top:4rem;
     left:4rem;
 
 }
-.logo{
+.header__logo{
 
    height: 3.5rem;
 
@@ -54,7 +55,7 @@ header{
 
 /* box of tittle  */
 
-.text-box{
+.header__text-box{
 position: absolute;
 left:  50%;
 top: 40%;
@@ -73,7 +74,7 @@ margin-bottom: 6rem;
 
 
 }
-.headering-primary-main{
+.headering-primary--main{
 display: block;
  font-size:6rem;
  font-weight: 400;
@@ -83,7 +84,7 @@ animation-duration: 1s;
 animation-timing-function: ease-out;
 
 }
-.headering-primary-sub{
+.headering-primary--sub{
     display: block;
     font-size:2rem ;
     font-weight: 400;
@@ -142,7 +143,7 @@ animation-timing-function: ease-out;
   box-shadow: 0 .5rem 2rem rgba(0, 0,0, .2);
  }
 
-.btn-white{
+.btn--white{
   background: #fff;
   color: #777;
 }
@@ -162,7 +163,7 @@ animation-timing-function: ease-out;
 
 
 }
-.btn-white::after{
+.btn--white::after{
   background: #fff;
 }
 
@@ -170,8 +171,8 @@ animation-timing-function: ease-out;
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
 }
-.btn-animated{
-  animation: moveInBottom;
+.btn--animated{
+  animation: moveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards;
 }
 
